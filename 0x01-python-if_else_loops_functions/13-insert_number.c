@@ -8,7 +8,7 @@
  ** @number: integer to be included in new node
  ** Return: address of the new element or NULL if it fails
  */
-listint_t *insert_node(listint_t **head, int number);
+listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *new;
 	listint_t *current;
