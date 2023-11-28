@@ -4,12 +4,14 @@ number = random.randint(-10000, 10000)
 def last(number):
     str_number = str(number)
 
-    for digit in str_number:
-        if digit == str_number[-1]:
-                return digit
+    if number < 0:
+        return "-" +  str_number[-1]
+    else:
+        return str_number[-1]
 
 last_num = last(number)
 intege = int(last_num)
+
 def state(intege):
     if intege > 5:
         return " and is greater than 5"
