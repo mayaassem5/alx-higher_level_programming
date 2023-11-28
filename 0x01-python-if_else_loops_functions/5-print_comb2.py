@@ -2,7 +2,5 @@
 for i in range(99):
     if i < 10:
         print("0{}".format(i), end=", ")
-    elif i == 98:
-        print("{}".format(i), end="")
     else:
-        print("{}".format(i), end=", ")
+        print("{}".format(i), end=", " if i < 98 else "\n")
