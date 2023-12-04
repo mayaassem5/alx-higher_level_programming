@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- *  * reverse - reverses the second half of the list
- *   *
- *    * @h_r: head of the second half
- *     * Return: no return
- *      */
+ ** reverse - reverses the second half of the list
+ **
+ ** @h_r: head of the second half
+ ** Return: no return
+ **/
 void reverse(listint_t **h_r)
 	listint_t *prv;
 	listint_t *crr;
@@ -25,12 +25,12 @@ void reverse(listint_t **h_r)
 }
 
 /**
- *  * compare - compares each int of the list
- *   *
- *    * @h1: head of the first half
- *     * @h2: head of the second half
- *      * Return: 1 if are equals, 0 if not
- *       */
+ ** compare - compares each int of the list
+ **
+ ** @h1: head of the first half
+ ** @h2: head of the second half
+ ** Return: 1 if are equals, 0 if not
+ **/
 int compare(listint_t *h1, listint_t *h2)
 {
 	listint_t *tmp1;
@@ -61,12 +61,12 @@ int compare(listint_t *h1, listint_t *h2)
 }
 
 /**
- *  * is_palindrome - checks if a singly linked list
- *   * is a palindrome
- *    * @head: pointer to head of list
- *     * Return: 0 if it is not a palindrome,
- *      * 1 if it is a palndrome
- *       */
+ ** is_palindrome - checks if a singly linked list
+ ** is a palindrome
+ ** @head: pointer to head of list
+ ** Return: 0 if it is not a palindrome,
+ ** 1 if it is a palndrome
+ **/
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow, *fast, *prev_slow;
