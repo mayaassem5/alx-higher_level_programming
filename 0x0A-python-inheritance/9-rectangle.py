@@ -1,37 +1,59 @@
 #!/usr/bin/python3
-"""
-This module implements a Rectangle object
+"""Module that holds the class BaseGeometry
 """
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+class BaseGeometry:
+    """BaseGeometry class
+    """
+
+    def area(self):
+        """Calculates the area
+            Returns:
+                float: area
+        """
+
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """Validates input
+        """
+
+        if type(value) is not int:
+            raise TypeError("{:s} must be an integer".format(name))
+        if value <= 0:
+            raise ValueError("{:s} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
-    def __init__(self, width, height):
-        """initialisation
+    """Inherits from BaseGeometry
+    """
 
-        Args:
-            width (int): width
-            height (int): height
+    def __init__(self, width, height):
+        """Initializes the class
+            Args:
+                width (int): width rectangle
+                height (int): height rectangle
         """
+
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.__width = width
+
+        self.integer_validator("height", height)
         self.__height = height
 
     def area(self):
-        """area
-
-        Returns:
-            int: response
+        """Calculates area for a rectangle
+            Returns:
+                float: area rectangle
         """
+
         return self.__width * self.__height
 
     def __str__(self):
-        """string
-
-        Returns:
-            str: string representation
+        """Returns rectangle represention
+            Returns:
+                str: rectangle representation
         """
-        return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+
+        return ("[Rectangle] {}/{}".format(self.__width, self.__height))

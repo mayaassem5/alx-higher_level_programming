@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 """
-This module implements a custom list object
+Contains a class MyList that inherits from list builtin
 """
 
 
 class MyList(list):
-    """Custom List
-    """
-    def print_sorted(self):
+    """Inherits from the list class"""
+
+    def __init__(self):
+        """Initializes the object
         """
-        prints the list, but sorted (ascending sort)
+        super().__init__()
+
+    def print_sorted(self):
+        """Prints the sorted list
         """
         print(sorted(self))
 

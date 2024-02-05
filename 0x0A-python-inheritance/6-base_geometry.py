@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""
-This module implements an object skeleton for BaseGeometry
+"""Module that has an empty base class BaseGeometry and empty class function
 """
 
 
 class BaseGeometry:
-    """implementation
+    """Geometry Class
     """
-    def area(self):
-        """find area
 
-        Raises:
-            Exception: area not implemented
+    def area(self):
+        """Calculates the area
+            Returns:
+                float: area
         """
         raise Exception("area() is not implemented")
